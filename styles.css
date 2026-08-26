@@ -187,7 +187,16 @@ a { color: var(--red); }
 /* ---------- Product card: image floats on the field, serif name below ---------- */
 .product {
   text-align: center;
+  background: rgba(244, 237, 224, 0.28);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 14px;
+  padding: 1.4rem 1.2rem 1.6rem;
+  box-shadow: 0 4px 24px rgba(32, 26, 18, 0.08);
 }
+.product .ph.floater-static,
+.product img { margin-bottom: 1.2rem; }
 .ph.floater-static {
   position: static;
   width: 100%;
