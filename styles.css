@@ -110,6 +110,12 @@ a { color: var(--red); }
      width instead of a fixed grid column. */
   .bio-grid { grid-template-columns: 1fr !important; }
   .bio-grid img { width: 100% !important; }
+
+  /* Contact page: stack form/info to one column so everything reads
+     top-to-bottom (form, then booking/press, then follow, then photo)
+     instead of two columns squeezed side by side. */
+  .contact-grid { grid-template-columns: 1fr !important; gap: 2.5rem !important; }
+  .contact-photo-ph { width: 100% !important; aspect-ratio: 16/9 !important; }
 }
 
 /* ---------- The continuous floating-illustration field ---------- */
