@@ -17,12 +17,12 @@
        same way the reference site's clouds/characters run the length
        of the page. Swap each .floater for a real transparent PNG. -->
   <div class="floaters">
-    <img src="images/stickfigure-shovel.png" alt="Stick figure with a shovel" class="floater" style="top:2vh; left:2vw; width:200px; height:auto; border:none; background:none;">
-    <img src="images/brotherrandy-logo.png" alt="Brother Randy hand-lettered logo" class="floater" style="top:6vh; right:4vw; width:260px; height:auto; border:none; background:none;">
-    <img src="images/stickfigure-axe.png" alt="Stick figure with an axe" class="floater" style="top:38vh; left:1vw; width:150px; height:auto; border:none; background:none;">
+    <img src="images/stickfigure-shovel.png" alt="Stick figure with a shovel" class="floater" style="top:2vh; left:2vw; width:120px; height:auto; border:none; background:none;">
+
+    <img src="images/stickfigure-axe.png" alt="Stick figure with an axe" class="floater" style="top:44vh; left:1vw; width:150px; height:auto; border:none; background:none;">
     <img src="images/dump-truck.png" alt="Dump truck illustration" class="floater" style="top:70vh; right:2vw; width:260px; height:auto; border:none; background:none;">
-    <div class="floater" style="top:112vh; left:4vw; width:100px; height:140px;"><span>Guitar<br>headstock</span></div>
-    <img src="images/douglasville.png" alt="Douglasville road sign" class="floater" style="top:150vh; right:6vw; width:230px; height:auto; border:none; background:none;">
+    <img src="images/douglasville.png" alt="Douglasville road sign" class="floater" style="top:112vh; left:4vw; width:230px; height:auto; border:none; background:none;">
+    <div class="floater" style="top:150vh; right:6vw; width:130px; height:100px; transform:rotate(-3deg);"><span>Dust cloud</span></div>
     <img src="images/milk.png" alt="Milk jug illustration" class="floater" style="top:185vh; left:2vw; width:150px; height:auto; border:none; background:none;">
     <img src="images/axe-stump.png" alt="Axe embedded in a tree stump" class="floater" style="top:212vh; right:3vw; width:230px; height:auto; border:none; background:none;">
     <img src="images/church.png" alt="Small country church illustration" class="floater" style="top:248vh; left:5vw; width:230px; height:auto; border:none; background:none;">
@@ -31,7 +31,7 @@
 
   <nav class="site-nav">
     <button class="nav-toggle" aria-label="Toggle menu">☰</button>
-    <a href="index.html" class="nav-mark">brother randy</a>
+    <a href="index.html" class="nav-mark" aria-label="Brother Randy home"></a>
     <ul class="nav-links">
       <li><a href="index.html" class="active">Home</a></li>
       <li><a href="music.html">Music</a></li>
@@ -43,25 +43,15 @@
   <!-- ============ HERO ============ -->
   <section class="section" style="padding-top:2rem; text-align:center;">
     <div class="wrap">
-      <h1 style="font-size:clamp(2.6rem, 7vw, 5.2rem); font-weight:600;">we are brother randy</h1>
-      <p style="font-family:var(--font-body); font-style:italic; color:var(--ink-soft); font-size:1.05rem; margin-top:0.9rem;">
-        "the reason you should leave is the reason you should stay"
-      </p>
+      <img src="images/brotherrandy-logo.png" alt="Brother Randy" style="width:100%; max-width:640px; height:auto; display:block; margin:0 auto;">
       <a href="music.html" class="btn-pill" style="margin-top:1.6rem;">hear the new single</a>
-    </div>
-  </section>
-
-  <!-- ============ PROMO PHOTO ============ -->
-  <section class="section" style="padding-top:1rem;">
-    <div class="wrap">
-      <img src="images/hero.png" alt="Brother Randy promo photo" style="width:100%; aspect-ratio:16/10; object-fit:cover; display:block; border:none;">
     </div>
   </section>
 
   <!-- ============ VIDEO ============ -->
   <section class="section reveal">
     <div class="wrap">
-      <div style="position:relative; width:100%; padding-top:56.25%; background:#000;">
+      <div style="position:relative; width:75%; max-width:800px; margin:0 auto; padding-top:56.25%; background:#000;">
         <iframe
           src="https://www.youtube.com/embed/dQw4w9WgXcQ"
           title="BROTHER RANDY — official video (placeholder)"
@@ -80,8 +70,16 @@
   <section class="section reveal" style="text-align:center;">
     <div class="wrap">
       <span class="eyebrow">What's Next</span>
-      <h2 style="font-size:clamp(1.8rem, 4vw, 2.6rem); font-weight:600;">[working title] — coming [release date]</h2>
+      <img src="images/messy-album-art.jpg" alt="MESSY album art" style="width:75%; max-width:800px; height:auto; display:block; margin:0 auto 1.2rem;">
+      <h2 style="font-size:clamp(1.8rem, 4vw, 2.6rem); font-weight:600;">MESSY — coming September 25</h2>
       <a href="#" class="btn-pill" style="margin-top:1.4rem;">get notified</a>
+    </div>
+  </section>
+
+  <!-- ============ PROMO PHOTO ============ -->
+  <section class="section" style="padding-top:1rem;">
+    <div class="wrap">
+      <img src="images/hero.png" alt="Brother Randy promo photo" style="width:75%; max-width:800px; aspect-ratio:16/10; object-fit:cover; display:block; margin:0 auto; border:none;">
     </div>
   </section>
 
@@ -122,13 +120,18 @@
     <div class="wrap" style="display:grid; grid-template-columns:1fr 1.3fr; gap:3rem; align-items:center;">
       <img src="images/bio.png" alt="Brother Randy band photo" style="width:100%; aspect-ratio:4/5; object-fit:cover; display:block;">
       <div>
-        <span class="eyebrow">The Story</span>
-        <h2 style="font-size:clamp(1.8rem, 3.6vw, 2.4rem); font-weight:600; margin-bottom:1rem;">two worlds, one riff</h2>
+        <span class="eyebrow">Meet Brother Randy</span>
         <p style="color:var(--ink-soft);">
-          BROTHER RANDY was built on a simple idea: heavy songs don't have to leave the porch behind.
-          Rooted just outside Atlanta, the project fuses metalcore's weight with the storytelling bones
-          of country music — plainspoken lyrics, gang-vocal hooks, and breakdowns that hit like a screen
-          door in a windstorm. [Expand this bio with more background, influences, and milestones as they happen.]
+          BROTHER RANDY is from Douglasville, GA. The members grew up down the street from each other
+          and are now homeowners. They started this band to have an excuse to hang out together.
+        </p>
+        <p style="color:var(--ink-soft); margin-top:1rem;">
+          They make loud music about bad decisions, complicated relationships, and other problems
+          you'd think they'd be old enough to avoid by now.
+        </p>
+        <p style="color:var(--ink-soft); margin-top:1rem;">
+          BROTHER RANDY sounds like growing up in the South, discovering emo, and never fully recovering
+          from either.
         </p>
       </div>
     </div>
