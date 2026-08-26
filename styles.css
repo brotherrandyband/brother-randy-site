@@ -93,6 +93,23 @@ a { color: var(--red); }
   }
   .nav-links.open { transform: translateX(0); }
   .nav-toggle { display: block; }
+
+  /* The floater positions are tuned in vh for how content stacks on a
+     desktop-width page. On a narrow screen the same content reflows to
+     a very different height, so those vh offsets land in the wrong
+     spot and overlap real content. Simplest fix: hide the decorative
+     floater layer on mobile — the actual photos/products are untouched. */
+  .floaters { display: none !important; }
+
+  /* Hero photo: let it use the full width on mobile instead of the
+     desktop 75%/800px cap. */
+  .hero-photo { width: 100% !important; max-width: none !important; }
+
+  /* Bio section: stack to a single column so the photo sits above the
+     text (it's already first in the markup), and let it use the full
+     width instead of a fixed grid column. */
+  .bio-grid { grid-template-columns: 1fr !important; }
+  .bio-grid img { width: 100% !important; }
 }
 
 /* ---------- The continuous floating-illustration field ---------- */
