@@ -188,7 +188,7 @@ a { color: var(--red); }
 .product {
   text-align: center;
 }
-.product .ph.floater-static {
+.ph.floater-static {
   position: static;
   width: 100%;
   aspect-ratio: 1/1;
