@@ -1,0 +1,202 @@
+/* ==========================================================================
+   BROTHER RANDY — shared stylesheet (v2)
+   Model: one continuous illustrated field runs behind the whole page,
+   the way weareunpeople.com does it — not boxed sections. Minimal
+   transparent nav, bold red logo mark, serif display headlines, red
+   pill CTAs, product cards that sit directly on the background.
+   Theme: metalcore riffs, country dust — dusty parchment field with
+   floating Americana/road imagery instead of unpeople's sage-and-clouds.
+   ========================================================================== */
+
+:root {
+  --field:     #cfc3a3;   /* the one continuous background color */
+  --field-2:   #c4b892;   /* very slightly deeper, for footer */
+  --ink:       #201a12;   /* near-black text */
+  --ink-soft:  #55503f;   /* secondary text */
+  --red:       #b8382a;
+  --red-hot:   #d4432f;
+  --line:      rgba(32,26,18,0.18);
+
+  --font-logo: 'Anton', 'Arial Narrow', sans-serif;
+  --font-display: 'Fraunces', Georgia, serif;
+  --font-body: 'Zilla Slab', Georgia, serif;
+  --font-mono: 'Space Mono', 'Courier New', monospace;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}
+
+body {
+  margin: 0;
+  background: var(--field);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 17px;
+  line-height: 1.55;
+  position: relative;
+  overflow-x: hidden;
+}
+
+h1, h2, h3 { font-family: var(--font-display); margin: 0; line-height: 1.02; }
+a { color: var(--red); }
+
+.eyebrow {
+  font-family: var(--font-mono);
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  font-size: 0.7rem;
+  color: var(--ink-soft);
+  display: inline-block;
+  margin-bottom: 0.7rem;
+}
+
+/* ---------- Nav: minimal, transparent, sits on the field ---------- */
+.site-nav {
+  position: relative;
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.4rem 5vw;
+}
+.nav-mark {
+  font-family: var(--font-logo);
+  font-size: 1.3rem;
+  letter-spacing: 0.02em;
+  color: var(--red);
+  text-decoration: none;
+}
+.nav-links { display: flex; gap: 2.2rem; list-style: none; margin: 0; padding: 0; }
+.nav-links a {
+  color: var(--ink);
+  text-decoration: none;
+  font-family: var(--font-mono);
+  font-size: 0.76rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+.nav-links a:hover, .nav-links a.active { color: var(--red); }
+.nav-toggle { display: none; background: none; border: none; color: var(--ink); font-size: 1.6rem; cursor: pointer; }
+
+@media (max-width: 760px) {
+  .nav-links {
+    position: fixed; top: 0; right: 0; height: 100vh; width: 68vw;
+    background: var(--field-2);
+    flex-direction: column; justify-content: center; gap: 2rem;
+    padding: 2rem;
+    transform: translateX(100%);
+    transition: transform 0.35s ease;
+    z-index: 60;
+  }
+  .nav-links.open { transform: translateX(0); }
+  .nav-toggle { display: block; }
+}
+
+/* ---------- The continuous floating-illustration field ---------- */
+/* One wrapper spans the whole page; each floater is absolutely
+   positioned within it so imagery drifts behind every section
+   without being boxed to any single one. Swap ph-floater content
+   for real transparent-PNG illustrations. */
+.field {
+  position: relative;
+  z-index: 1;
+}
+.floaters {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+.floater {
+  position: absolute;
+  border: 1px dashed rgba(32,26,18,0.3);
+  background: repeating-linear-gradient(135deg, rgba(32,26,18,0.05) 0 2px, transparent 2px 14px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.floater span {
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  padding: 0.4rem 0.6rem;
+}
+
+/* ---------- Content sections sit on the field, no bg of their own ---------- */
+.section { position: relative; z-index: 2; padding: 3rem 5vw; }
+.wrap { max-width: 1180px; margin: 0 auto; }
+
+/* ---------- Buttons: red pill, like the reference site ---------- */
+.btn-pill {
+  display: inline-block;
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 0.95rem;
+  padding: 0.85rem 2rem;
+  border-radius: 999px;
+  text-decoration: none;
+  background: var(--red);
+  color: #f4ede0;
+  border: none;
+  transition: background 0.2s ease;
+}
+.btn-pill:hover { background: var(--red-hot); }
+.btn-outline {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 0.76rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 0.8rem 1.5rem;
+  border-radius: 999px;
+  border: 1px solid var(--ink);
+  color: var(--ink);
+  text-decoration: none;
+}
+.btn-outline:hover { background: var(--ink); color: var(--field); }
+
+/* ---------- Product card: image floats on the field, serif name below ---------- */
+.product {
+  text-align: center;
+}
+.product .ph.floater-static {
+  position: static;
+  width: 100%;
+  aspect-ratio: 1/1;
+  margin-bottom: 1.4rem;
+}
+.product h3 { font-size: 1.4rem; font-weight: 400; margin-bottom: 0.3rem; }
+.product .price { font-family: var(--font-mono); font-size: 0.85rem; color: var(--ink-soft); margin-bottom: 1rem; }
+
+/* ---------- Footer ---------- */
+.site-footer {
+  position: relative; z-index: 2;
+  padding: 3rem 5vw 2.2rem;
+  background: var(--field-2);
+  border-top: 1px solid var(--line);
+  display: flex; flex-wrap: wrap; gap: 1.5rem;
+  align-items: center; justify-content: space-between;
+}
+.foot-mark { font-family: var(--font-logo); color: var(--red); text-decoration: none; letter-spacing: 0.02em; }
+.foot-links { display: flex; gap: 1.6rem; list-style: none; padding: 0; margin: 0; }
+.foot-links a { color: var(--ink); text-decoration: none; font-family: var(--font-mono); font-size: 0.74rem; letter-spacing: 0.08em; text-transform: uppercase; }
+.foot-links a:hover { color: var(--red); }
+.foot-fine { width: 100%; color: var(--ink-soft); font-family: var(--font-mono); font-size: 0.66rem; opacity: 0.8; }
+
+/* ---------- Page header (interior pages) ---------- */
+.page-head { padding: 2rem 5vw 3rem; position: relative; z-index: 2; }
+.page-head h1 { font-size: clamp(2.6rem, 7vw, 4.4rem); }
+.page-head p { max-width: 46ch; color: var(--ink-soft); margin-top: 0.8rem; }
+
+/* ---------- Reveal on scroll (progressive enhancement only —
+   content is fully visible by default; JS just adds a subtle
+   fade-up if it runs) ---------- */
+.reveal { opacity: 1; transform: none; }
+.reveal.pending { opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease, transform 0.6s ease; }
+.reveal.in { opacity: 1; transform: translateY(0); }
