@@ -163,18 +163,19 @@ a { color: var(--red); }
 /* ---------- Buttons: red pill, like the reference site ---------- */
 .btn-pill {
   display: inline-block;
-  font-family: var(--font-body);
-  font-weight: 600;
-  font-size: 0.95rem;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
   padding: 0.85rem 2rem;
   border-radius: 999px;
   text-decoration: none;
-  background: var(--red);
-  color: #f4ede0;
+  background: var(--ink);
+  color: #f0e6d2;
   border: none;
   transition: background 0.2s ease;
 }
-.btn-pill:hover { background: var(--red-hot); }
+.btn-pill:hover { background: var(--ink-soft); }
 .btn-outline {
   display: inline-block;
   font-family: var(--font-mono);
