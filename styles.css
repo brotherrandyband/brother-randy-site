@@ -111,6 +111,11 @@ a { color: var(--red); }
   .bio-grid { grid-template-columns: 1fr !important; }
   .bio-grid img { width: 100% !important; }
 
+  /* Hero: the 2rem/3rem top/bottom padding from the base section rule
+     reads as a lot of dead space around just a logo image on a short
+     mobile screen — tighten it up. */
+  .hero-section { padding-top: 1rem !important; padding-bottom: 0.5rem !important; }
+
   /* Contact page: stack form/info to one column so everything reads
      top-to-bottom (form, then booking/press, then follow, then photo)
      instead of two columns squeezed side by side. */
