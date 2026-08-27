@@ -209,14 +209,14 @@ a { color: var(--red); }
 /* ---------- Footer ---------- */
 .site-footer {
   position: relative; z-index: 2;
-  padding: 3rem 5vw 2.2rem;
+  padding: 1.6rem 5vw 2.2rem;
   background: var(--field-2);
   border-top: 1px solid var(--line);
   display: flex; flex-wrap: wrap; gap: 1.5rem;
   align-items: center; justify-content: space-between;
 }
 .foot-mark { font-family: var(--font-logo); color: var(--red); text-decoration: none; letter-spacing: 0.02em; }
-.foot-links { display: flex; gap: 1.6rem; list-style: none; padding: 0; margin: 0; }
+.foot-links { display: flex; flex-wrap: wrap; gap: 1.6rem; list-style: none; padding: 0; margin: 0; }
 .foot-links a { color: var(--ink); text-decoration: none; font-family: var(--font-mono); font-size: 0.74rem; letter-spacing: 0.08em; text-transform: uppercase; }
 .foot-links a:hover { color: var(--red); }
 .foot-fine { width: 100%; color: var(--ink-soft); font-family: var(--font-mono); font-size: 0.66rem; opacity: 0.8; }
