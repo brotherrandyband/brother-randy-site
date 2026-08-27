@@ -231,6 +231,7 @@ a { color: var(--red); }
 .page-head { padding: 2rem 5vw 3rem; position: relative; z-index: 2; }
 .page-head h1 { font-size: clamp(2.6rem, 7vw, 4.4rem); }
 .page-head p { max-width: 46ch; color: var(--ink-soft); margin-top: 0.8rem; }
+.page-head-tight { padding-bottom: 1.2rem; }
 
 /* ---------- Reveal on scroll (progressive enhancement only —
    content is fully visible by default; JS just adds a subtle
