@@ -86,14 +86,12 @@
   <section class="section reveal" style="text-align:center;">
     <div class="wrap" style="max-width:520px;">
       <span class="eyebrow">Stay In The Loop</span>
-      
-      <form style="display:flex; gap:0.8rem; flex-wrap:wrap; justify-content:center;">
-        <input type="email" placeholder="your@email.com" style="flex:1; min-width:200px; padding:0.85rem 1rem; background:rgba(244,237,224,0.5); border:1px solid var(--line); color:var(--ink); font-family:var(--font-body);">
+      <form action="https://formspree.io/f/maeyjnjw" method="POST" style="display:flex; gap:0.8rem; flex-wrap:wrap; justify-content:center;">
+        <input type="hidden" name="_subject" value="New email signup from the home page">
+        <input type="text" name="_gotcha" style="display:none">
+        <input type="email" name="email" required placeholder="your@email.com" style="flex:1; min-width:200px; padding:0.85rem 1rem; background:rgba(244,237,224,0.5); border:1px solid var(--line); color:var(--ink); font-family:var(--font-body);">
         <button type="submit" class="btn-pill" style="border:none; cursor:pointer;">sign up</button>
       </form>
-      <p style="font-family:var(--font-mono); font-size:0.66rem; color:var(--ink-soft); margin-top:0.8rem;">
-        ↑ placeholder — swap for the real Mailchimp embed once it's set up
-      </p>
     </div>
   </section>
 
